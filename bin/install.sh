@@ -1,7 +1,7 @@
 #!/bin/sh
 
-./install-xz.sh
-./install-yaml.sh
-./install-psych.sh
-./install-openssl.sh
-./install-ruby.sh
+./bin/install-xz.sh
+./bin/install-yaml.sh
+./bin/install-psych.sh
+./bin/install-openssl.sh
+./bin/install-ruby.sh
