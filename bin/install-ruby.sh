@@ -17,7 +17,7 @@ cd ruby-4.0.6/
 # Install
 export LDFLAGS=-L$prefix/lib
 export CPPFLAGS=-I$prefix/include
-export RUBY_CONFIGURE_OPTS="--with-libyaml-dir=$pefix --with-openssl-dir=$prefix"
+export RUBY_CONFIGURE_OPTS="--with-libyaml-dir=$prefix --with-openssl-dir=$prefix"
 
 ./configure --prefix=$prefix
 make
