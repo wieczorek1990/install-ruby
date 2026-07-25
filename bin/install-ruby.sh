@@ -1,4 +1,5 @@
 #!/bin/sh
+# Installs Ruby.
 
 source ./bin/prefix.sh
 
@@ -14,11 +15,10 @@ tar xfz ruby-4.0.6.tar.gz
 cd ruby-4.0.6/
 
 # Install
-export LDFLAGS=-L/opt/lib
-export CPPFLAGS=-I/opt/include
-export RUBY_CONFIGURE_OPTS="--with-libyaml-dir=/opt --with-openssl-dir=/opt"
+export LDFLAGS=-L$prefix/lib
+export CPPFLAGS=-I$prefix/include
+export RUBY_CONFIGURE_OPTS="--with-libyaml-dir=$pefix --with-openssl-dir=$prefix"
 
-make clean
-./configure --prefix=/opt
+./configure --prefix=$prefix
 make
 sudo make install
