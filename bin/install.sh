@@ -1,4 +1,5 @@
 #!/bin/sh
+# Combined Ruby language installer.
 
 ./bin/install-xz.sh
 ./bin/install-yaml.sh

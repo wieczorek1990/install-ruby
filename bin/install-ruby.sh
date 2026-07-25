@@ -21,3 +21,4 @@ cd ruby-4.0.6/
 ./configure --prefix=$prefix
 make
 sudo make install
+cd -

@@ -10,3 +10,4 @@ cd yaml-0.2.5/
 ./configure --prefix=$prefix
 make
 sudo make install
+cd -
