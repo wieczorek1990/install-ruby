@@ -1,1 +1,6 @@
 *.tar.gz
+
+openssl-openssl-*/
+snapshot-master/
+xz-*/
+yaml-*/

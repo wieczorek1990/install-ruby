@@ -3,15 +3,16 @@
 
 source ./bin/prefix.sh
 
-if [ -f xz-5.8.3.tar.gz ]
+if [ -f $xz_artifact ]
 then
   echo "Already downloaded."
 else
-  curl --location --output xz-5.8.3.tar.gz https://github.com/tukaani-project/xz/releases/download/v5.8.3/xz-5.8.3.tar.gz
+  curl --location --output $xz_artifact $xz_artifact_url
 fi
 
-tar xfz xz-5.8.3.tar.gz
-cd xz-5.8.3/
+tar xfz $xz_artifact
+dir=$(basename $xz_artifact .tar.gz)
+cd $dir
 ./configure --prefix=$prefix
 make
 sudo make install

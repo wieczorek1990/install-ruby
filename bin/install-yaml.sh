@@ -3,15 +3,16 @@
 
 source ./bin/prefix.sh
 
-if [ -f yaml-0.2.5.tar.gz ]
+if [ -f $yaml_artifact ]
 then
   echo "Already downloaded."
 else
-  curl --location --output yaml-0.2.5.tar.gz https://pyyaml.org/download/libyaml/yaml-0.2.5.tar.gz
+  curl --location --output $yaml_artifact $yaml_artifact_url
 fi
 
-tar xfz yaml-0.2.5.tar.gz
-cd yaml-0.2.5/
+tar xfz $yaml_artifact
+dir=$(basename $yaml_artifact .tar.gz)
+cd $dir
 ./configure --prefix=$prefix
 make
 sudo make install
