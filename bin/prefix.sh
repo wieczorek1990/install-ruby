@@ -1,6 +1,6 @@
 #!/bin/sh
 
-prefix=/opt
+prefix=~/.local
 
 ruby_artifact=snapshot-master.tar.gz
 ruby_artifact_url=https://cache.ruby-lang.org/pub/ruby/snapshot/snapshot-master.tar.gz
